@@ -55,6 +55,11 @@ public class PatientServiceImp implements PatientService {
     }
 
     @Override
+    public List<MedicationResponse> getAllMedications() {
+        return patientFegin.getAllMedication();
+    }
+
+    @Override
     public PatientResponse getById(long id) {
 
         PatientResponse patientResponse = patientFegin.getById(id);

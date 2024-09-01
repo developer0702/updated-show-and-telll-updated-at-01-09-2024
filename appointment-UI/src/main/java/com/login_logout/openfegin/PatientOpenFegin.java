@@ -31,6 +31,9 @@ public interface PatientOpenFegin {
 	@GetMapping("micro-patient/patient/doctors")
 	public List<DoctorResponse> getAllDoctors();
 
+	@GetMapping("micro-patient/patient/getAllMedications")
+	public List<MedicationResponse> getAllMedication();
+
 	@GetMapping("micro-patient/patient/getById/{id}")
 	public PatientResponse getById(@PathVariable long id);
 

@@ -10,18 +10,18 @@ import java.util.List;
 @FeignClient(value = "micro-medication")
 public interface MedicationFiegn {
 
-    @GetMapping("medication/getMedication/{medicationId}")
+    @GetMapping("medications/getMedication/{medicationId}")
     public MedicationResponse getByMedicationId(@PathVariable long medicationId);
 
-    @GetMapping("medication/getAllMedications")
+    @GetMapping("medications/getAllMedications")
     public List<MedicationResponse> getAllMedications();
 
-    @PostMapping("medication/create")
+    @PostMapping("medications/create")
     public MedicationResponse createMedication(@RequestBody MedicationResponse medicationRequest);
 
-    @PutMapping("/updateMedication/{medicationId}")
+    @PutMapping("medications/updateMedication/{medicationId}")
     public MedicationResponse updateMedication(@PathVariable long medicationId, @RequestBody MedicationRequest medicationRequest);
 
-    @DeleteMapping("/deleteMedication/{medicationId}")
+    @DeleteMapping("medications/deleteMedication/{medicationId}")
     public MedicationResponse deleteMedication(@PathVariable long medicationId);
 }

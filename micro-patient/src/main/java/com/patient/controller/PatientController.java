@@ -5,6 +5,7 @@ import com.patient.entity.Patient;
 import com.patient.request.MedicationRequest;
 import com.patient.response.AppointmentResponse;
 import com.patient.response.DoctorResponse;
+import com.patient.response.MedicationResponse;
 import com.patient.response.PatientResponse;
 import com.patient.service.CommonService;
 import com.patient.service.PatientService;
@@ -80,6 +81,10 @@ public class PatientController {
         return commonService.getAllDoctors();
     }
 
+    @GetMapping("/getAllMedications")
+    public List<MedicationResponse> getAllMedications(){
+        return commonService.getAllMedications();
+    }
     @GetMapping("/book/{did}")
     public DoctorResponse GetDoctorByDid(@PathVariable long did) {
         return commonService.getDoctorByDID(did);
@@ -89,7 +94,6 @@ public class PatientController {
     public AppointmentResponse CreateAppointment(@RequestBody AppointmentResponse appointmentResponse) {
         return commonService.CreateAppointment(appointmentResponse);
     }
-
 
     @DeleteMapping("/deleteAppointemt/{aid}")
     public boolean DeleteAppointment(@PathVariable long aid) {

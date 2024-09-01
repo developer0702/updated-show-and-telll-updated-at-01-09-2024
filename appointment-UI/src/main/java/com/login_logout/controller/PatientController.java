@@ -1,10 +1,13 @@
+
+
+
+
 package com.login_logout.controller;
 
 
 import com.login_logout.response.AppointmentResponse;
 import com.login_logout.response.MedicationResponse;
 import com.login_logout.response.PatientResponse;
-import com.login_logout.service.DoctorService;
 import com.login_logout.service.MedicationService;
 import com.login_logout.service.PatientService;
 import com.login_logout.service.UserService;
@@ -55,15 +58,22 @@ public class PatientController {
         return "patient_view/home";
     }
 
-
     @GetMapping("/appointments/{pid}")
     public String listOfAppointments(@PathVariable long pid, Model model) {
         List<AppointmentResponse> appos = patientService.getAllAppointmentsByPid(pid);
 
+        appos.forEach(appo -> {
+            if (appo.getMedication() != null) {
+                MedicationResponse medication = medicationService.getMedicationByMedicationId(appo.getMedication().getMedicationId());
+                appo.setMedication(medication);
+            }
+        });
+        // Assuming each AppointmentResponse contains medication details
         appos.sort(Comparator.comparing(AppointmentResponse::getDate).thenComparing(AppointmentResponse::getTime));
         model.addAttribute("appos", appos);
-        return "patient_view/appointments";
 
+
+        return "patient_view/appointments";
     }
 
     @GetMapping("/doctors")
@@ -71,7 +81,12 @@ public class PatientController {
         model.addAttribute("doctors", patientService.getAllDoctors());
         return "patient_view/AllDoctors";
     }
-
+    @GetMapping("/getAllMedication")
+    public String getAllMedications(Model model) {
+        Model medications = model.addAttribute("medications", patientService.getAllMedications());
+        System.out.println(medications);
+        return "patient_view/medication";
+    }
     @GetMapping("/profile/{id}")
     public String getById(@PathVariable long id, Model model) {
         model.addAttribute("patient", patientService.getById(id));
@@ -157,7 +172,7 @@ public class PatientController {
         if (isAppointmentTimeAvailable(appos, appointment)) {
             CreateAppointment(appointment, id, session);
             session.setAttribute("booked", "Appointment Updated.");
-            return "redirect:/patient/appointments/" + appointment.getPid() +"?success=true";
+            return "redirect:/patient/appointments/" + appointment.getPid() + "?success=true";
         } else {
             session.setAttribute("error", "Appointment time is already booked for patient within 30 minutes. Please choose a different time.");
             return "redirect:/patient/appointments/" + id;
@@ -175,6 +190,6 @@ public class PatientController {
     @GetMapping("/status/{aid}/{st}")
     public String ChangeStatusAppo(@PathVariable long aid, @PathVariable int st) {
         patientService.UpdateAppoStatus(aid, st);
-        return "doctor_view/home";
+        return "patient_view/home";
     }
 }

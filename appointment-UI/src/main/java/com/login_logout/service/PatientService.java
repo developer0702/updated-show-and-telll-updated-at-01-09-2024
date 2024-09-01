@@ -18,6 +18,7 @@ public interface PatientService {
      List<AppointmentResponse> getAllAppointmentsByPid(long pid);
 
      List<DoctorResponse> getAllDoctors();
+     List<MedicationResponse> getAllMedications();
 
      PatientResponse getById(long id);
 

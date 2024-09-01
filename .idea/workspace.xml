@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="dc9fcbfa-681b-4864-a8cb-21430c7991cc" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/appointment-UI/src/main/java/com/login_logout/controller/PatientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/appointment-UI/src/main/java/com/login_logout/controller/PatientController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/appointment-UI/src/main/java/com/login_logout/openfegin/PatientOpenFegin.java" beforeDir="false" afterPath="$PROJECT_DIR$/appointment-UI/src/main/java/com/login_logout/openfegin/PatientOpenFegin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/appointment-UI/src/main/java/com/login_logout/service/PatientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/appointment-UI/src/main/java/com/login_logout/service/PatientService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/appointment-UI/src/main/java/com/login_logout/service/PatientServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/appointment-UI/src/main/java/com/login_logout/service/PatientServiceImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/appointment-UI/src/main/resources/templates/patient_view/appointments.html" beforeDir="false" afterPath="$PROJECT_DIR$/appointment-UI/src/main/resources/templates/patient_view/appointments.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/appointment-UI/src/main/resources/templates/patient_view/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/appointment-UI/src/main/resources/templates/patient_view/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/appointment-UI/src/main/resources/templates/patient_view/medication.html" beforeDir="false" afterPath="$PROJECT_DIR$/appointment-UI/src/main/resources/templates/patient_view/medication.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/appointment-UI/target/classes/com/login_logout/controller/DoctorController.class" beforeDir="false" afterPath="$PROJECT_DIR$/appointment-UI/target/classes/com/login_logout/controller/DoctorController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/appointment-UI/target/classes/com/login_logout/controller/PatientController.class" beforeDir="false" afterPath="$PROJECT_DIR$/appointment-UI/target/classes/com/login_logout/controller/PatientController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/appointment-UI/target/classes/com/login_logout/openfegin/PatientOpenFegin.class" beforeDir="false" afterPath="$PROJECT_DIR$/appointment-UI/target/classes/com/login_logout/openfegin/PatientOpenFegin.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/appointment-UI/target/classes/com/login_logout/service/PatientService.class" beforeDir="false" afterPath="$PROJECT_DIR$/appointment-UI/target/classes/com/login_logout/service/PatientService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/appointment-UI/target/classes/com/login_logout/service/PatientServiceImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/appointment-UI/target/classes/com/login_logout/service/PatientServiceImp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/appointment-UI/target/classes/templates/patient_view/appointments.html" beforeDir="false" afterPath="$PROJECT_DIR$/appointment-UI/target/classes/templates/patient_view/appointments.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/appointment-UI/target/classes/templates/patient_view/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/appointment-UI/target/classes/templates/patient_view/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/appointment-UI/target/classes/templates/patient_view/medication.html" beforeDir="false" afterPath="$PROJECT_DIR$/appointment-UI/target/classes/templates/patient_view/medication.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/micro-patient/src/main/java/com/patient/controller/PatientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/micro-patient/src/main/java/com/patient/controller/PatientController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/micro-patient/src/main/java/com/patient/openfegin/MedicationFiegn.java" beforeDir="false" afterPath="$PROJECT_DIR$/micro-patient/src/main/java/com/patient/openfegin/MedicationFiegn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/micro-patient/src/main/java/com/patient/service/CommonService.java" beforeDir="false" afterPath="$PROJECT_DIR$/micro-patient/src/main/java/com/patient/service/CommonService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/micro-patient/target/classes/com/patient/controller/PatientController.class" beforeDir="false" afterPath="$PROJECT_DIR$/micro-patient/target/classes/com/patient/controller/PatientController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/micro-patient/target/classes/com/patient/openfegin/MedicationFiegn.class" beforeDir="false" afterPath="$PROJECT_DIR$/micro-patient/target/classes/com/patient/openfegin/MedicationFiegn.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/micro-patient/target/classes/com/patient/service/CommonService.class" beforeDir="false" afterPath="$PROJECT_DIR$/micro-patient/target/classes/com/patient/service/CommonService.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="2" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="2lSONr0qhxJJo20k0WwBMeJWq4s" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.ApiGatewayApplication.executor": "Run",
+    "Application.EurekaServerApplication.executor": "Run",
+    "Application.LoginLogoutServiceApplication.executor": "Run",
+    "Application.MedicationApplication.executor": "Run",
+    "Application.MicroAppointmentApplication.executor": "Run",
+    "Application.MicroDoctorApplication.executor": "Run",
+    "Application.MicroPatientApplication.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "F:/sanjay dev env/citiustech show and tell/git/Microservice-Appointment-Booking-main"
+  }
+}]]></component>
+  <component name="RunManager" selected="Application.MicroAppointmentApplication">
+    <configuration name="ApiGatewayApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.gateway.ApiGatewayApplication" />
+      <module name="student" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.gateway.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LoginLogoutServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.login_logout.LoginLogoutServiceApplication" />
+      <module name="login-logout-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.login_logout.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MedicationApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.medication.MedicationApplication" />
+      <module name="micro-medication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.medication.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MicroAppointmentApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.appointment.MicroAppointmentApplication" />
+      <module name="micro-appointment" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.appointment.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MicroDoctorApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.doctor.MicroDoctorApplication" />
+      <module name="micro-doctor" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.doctor.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.LoginLogoutServiceApplication" />
+        <item itemvalue="Application.MicroAppointmentApplication" />
+        <item itemvalue="Application.ApiGatewayApplication" />
+        <item itemvalue="Application.MedicationApplication" />
+        <item itemvalue="Application.MicroDoctorApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="dc9fcbfa-681b-4864-a8cb-21430c7991cc" name="Changes" comment="" />
+      <created>1725169973833</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1725169973833</updated>
+    </task>
+    <servers />
+  </component>
+</project>

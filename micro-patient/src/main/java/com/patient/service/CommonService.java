@@ -36,6 +36,10 @@ public class CommonService {
         return doctors;
     }
 
+    public List<MedicationResponse> getAllMedications(){
+        List<MedicationResponse> medications=medicationFiegn.getAllMedications();
+        return medications;
+    }
     public DoctorResponse getDoctorByDID(long id) {
         return doctorFegin.getById(id);
     }

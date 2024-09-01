@@ -55,6 +55,9 @@
                 <li class="nav-item"><a class="nav-link active" aria-current="page" href="/patient/">Home</a></li>
                 <li class="nav-item"><a class="nav-link" th:href="@{/patient/appointments/{pid} (pid=${patient.id})}" >View Appointments</a></li>
                 <li class="nav-item"><a class="nav-link" href="/patient/doctors">View Doctors</a></li>
+                <li class="nav-item"><a class="nav-link" href="/patient/setAlert">Alert Schedule</a></li>
+                <li class="nav-item"><a class="nav-link" href="/patient/getAllMedication">Get All Medications</a></li>
+
             </ul>
             <span class="navbar-text"><span class="glyphicon glyphicon-log-out"><a class="btn btn-danger" href="/logout" role="button">  Logout</a> </span>  </span>
         </div>
