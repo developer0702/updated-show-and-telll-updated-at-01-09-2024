@@ -1,0 +1,13 @@
+com\doctor\request\DoctorRequest.class
+com\doctor\response\AppointmentResponse.class
+com\doctor\response\PatientResponse.class
+com\doctor\response\DoctorResponse.class
+com\doctor\service\DoctorService.class
+com\doctor\entity\Doctor.class
+com\doctor\response\MedicationResponse.class
+com\doctor\controller\DoctorController.class
+com\doctor\repo\DoctorRepo.class
+com\doctor\service\CommonService.class
+com\doctor\service\PasswordService.class
+com\doctor\MicroDoctorApplication.class
+com\doctor\openfeign\AppointmentOpenFegin.class

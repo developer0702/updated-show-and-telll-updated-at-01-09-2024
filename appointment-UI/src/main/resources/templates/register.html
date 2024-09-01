@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	th:replace="base::layout(~{::section})">
+<head>
+<meta charset="ISO-8859-1">
+<title>patient register</title>
+
+</head>
+<body>
+	<section>
+
+		<div class="container p-3">
+			<div class="row">
+				<div class="col-md-6 offset-md-3">
+					<div class="card">
+						<div class="card-header text-center fs-4">Register Page</div>
+
+						<th:block th:if="${session.msg}">
+							<p class="text-center fs-4 text-success">[[${session.msg}]]</p>
+							<th:block th:text="${#session.removeAttribute('msg')}"></th:block>
+						</th:block>
+
+
+						<div class="card-body">
+							<form th:action="@{/createPatient}" th:object = "${patient}" method="POST">
+								<div class="mb-3">
+									<label>Enter Full Name</label> <input type="text" required="required"
+										name="fullName" class="form-control">
+								</div>
+								<div class="mb-3">
+									<label>Enter Email</label> <input type="email" name="email" required="required"
+										class="form-control">
+								</div>
+
+								<div class="mb-3">
+									<label>Enter Address</label> <input type="text" name="address" required="required"
+										class="form-control">
+								</div>
+								<div class="mb-3">
+									<label>Enter Mobile Number (10 digits only)</label> <input type="number"
+										name="mobileno" required="required"  class="form-control">
+								</div>
+								<div class="mb-3">
+									<label>Enter Password</label> <input type="password"
+										name="password" class="form-control" required="required">
+								</div>
+								<div class="mb-3">
+									<label>Enter Referring Physician Name</label> <input type="text"
+																		 name="refferingPhysician" class="form-control" required="required">
+								</div>
+
+								<div class="mb-3">
+									<label>medication Name</label> <input type="text"
+																						 name="name" class="form-control" required="required">
+								</div>
+
+								<div class="mb-3">
+									<label>medication Dose</label> <input type="text"
+																		  name="name" class="form-control" required="required">
+								</div>
+
+								<div class="mb-3">
+									<label>medication Route</label> <input type="text"
+																		  name="route" class="form-control" required="required">
+								</div>
+
+								<div class="mb-3">
+									<label>medication Start Date </label> <input type="date"
+																		  name="startDate" class="form-control" required="required">
+								</div>
+
+								<div class="mb-3">
+									<label>medication End Date </label> <input type="date"
+																				 name="endDate" class="form-control" required="required">
+								</div>
+								<div class="mb-3">
+									<label>medication Time</label> <input type="time"
+																		  name="time" class="form-control" required="required">
+								</div>
+								<button class="btn btn-primary col-md-12">Register</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+</body>
+</html>

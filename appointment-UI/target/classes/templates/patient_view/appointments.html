@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+
+    <meta charset="ISO-8859-1">
+    <title>Patient</title>
+    <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+            crossorigin="anonymous">
+    <style>
+        .panel {
+
+          border-radius:0;
+          transition: box-shadow 0.5s;
+        }
+
+
+
+
+        .panel-heading {
+          color: #fff !important;
+          background-color: #0064FF !important;
+          padding: 20px;
+          border-bottom: 1px solid transparent;
+          border-top-left-radius: 0px;
+          border-top-right-radius: 0px;
+          border-bottom-left-radius: 0px;
+          border-bottom-right-radius: 0px;
+        }
+
+
+    </style>
+
+</head>
+
+<body>
+
+
+<nav class="navbar navbar-expand-lg py-4 navbar-dark bg-primary">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Appointment Management</a>
+
+
+        <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item"><a class="nav-link active"
+                                        aria-current="page" href="/patient/">Home</a></li>
+
+                <li class="nav-item"><a class="nav-link" th:href="@{/patient/appointments/{pid} (pid=${patient.id})}">View
+                    Appointments</a></li>
+                <li class="nav-item"><a class="nav-link" href="/patient/doctors">View Doctors</a></li>
+
+            </ul>
+            <span class="navbar-text"><span class="glyphicon glyphicon-log-out"><a class="btn btn-danger" href="/logout"
+                                                                                   role="button">  Logout</a> </span>  </span>
+        </div>
+
+
+    </div>
+
+
+</nav>
+
+
+<div class="container-fluid text-center" style="padding-top: 2%;">
+    <div class="row content">
+        <div class="col-sm-2 sidenav">
+
+            <div class="row">
+
+                <div class="col">
+                    <div class="panel panel-default" align="left">
+                        <div class="panel-heading" align="center">
+                            <h2>Profile</h2>
+                        </div>
+                        <div class="panel-body" style=" padding-left: 15%; ">
+                            <div>
+                                <br>
+
+                                <p><strong> [[${patient.fullName}]]</strong></p>
+                                <p><strong> [[${patient.email}]]</strong></p>
+                                <p><strong>[[${patient.mobileno}]]</strong></p>
+                                <p><strong>[[${patient.address}]]</strong></p>
+                            </div>
+
+                        </div>
+                        <div style=" padding-left: 15%; ">
+
+
+                            <span class="navbar-text"><a class="btn btn-primary"
+                                                         th:href="@{/patient/profile/{id} (id=${patient.id})}"
+                                                         role="button">  Edit</a> </span>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="col-sm-8 text-left">
+
+
+            <div id="Appointments">
+
+                <div class="container">
+                    <div class="row">
+                        <h1> List Appointments </h1>
+                    </div>
+                    <th:block th:if="${session.deleted}">
+                        <b><p class="text-center fs-6 text-danger">[[${session.deleted}]]</p></b>
+                        <th:block th:text="${#session.removeAttribute('deleted')}"></th:block>
+                    </th:block>
+                    <th:block th:if="${session.booked}">
+                        <b><p class="text-center fs-6 text-success">[[${session.booked}]]</p></b>
+                        <th:block th:text="${#session.removeAttribute('booked')}"></th:block>
+                    </th:block>
+                    <th:block th:if="${session.error}">
+                        <b><p class="text-center fs-6 text-success">[[${session.error}]]</p></b>
+                        <th:block th:text="${#session.removeAttribute('error')}"></th:block>
+                    </th:block>
+                    <table class="table table-striped table-bordered">
+                        <thead class="table-dark">
+
+                        </thead>
+
+                        <tbody>
+                        <tr th:each="appo: ${appos}">
+
+                            <div class="box card mt-5 border-5 pt-2 active pb-0 px-3">
+                                <div class="card-body ">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <h5 class="card-title "><b> Dr. [[${appo.doctorResponse.fullName} ]]</b>
+                                                &emsp;
+                                                <h7>[[${appo.doctorResponse.specialization} ]]</h7>
+                                            </h5>
+
+
+                                        </div>
+
+                                    </div>
+                                    <div class="row" align="justify">
+                                        <h6 class="card-subtitle text-muted">
+
+
+                                            <h6>Email : [[${appo.doctorResponse.email} ]]<span class="font-weight-bold">  &emsp;&emsp;Place :  [[${appo.doctorResponse.address} ]] </span>
+                                            </h6></h6>
+
+
+                                        <div class=" col-md-auto">
+                                            <a href="#" class="btn btn-outlined btn-black text-muted bg-transparent"
+                                               data-wow-delay="0.7s"><h6>Date : [[${appo.date}]]</h6></a> &emsp;&emsp;&emsp;
+
+
+                                            <a href="#" class="btn btn-outlined btn-black text-muted bg-transparent"
+                                               data-wow-delay="0.7s"><h6>Time : [[${appo.time}]]</h6></a> &emsp;&emsp;&emsp;
+
+                                            <a href="#" class="btn btn-outlined btn-black text-muted bg-transparent"
+                                               data-wow-delay="0.7s"><h6>Status : [[${appo.status} ]]</h6></a>
+                                            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                                            <a th:href="@{/patient/editAppo/{aid} (aid=${appo.aid})}"
+                                               class="btn btn-primary">Update</a>
+                                            &emsp;
+                                            <a th:href="@{/patient/deleteAppo/{aid} (aid=${appo.aid})}"
+                                               class="btn btn-danger">Delete</a>
+
+
+                                            <a href="#" class="btn btn-outlined btn-black text-muted bg-transparent"
+                                               data-wow-delay="0.7s">
+                                                <a th:if="${appo.status == 'Pending'}">
+
+                                                    <a th:href="@{/doctor/status/{aid}/{st} (aid=${appo.aid}, st=1)}"
+                                                       class="btn btn-success">Accept</a>
+                                                    &emsp;&emsp;&emsp;&emsp;
+                                                    <a th:href="@{/doctor/status/{aid}/{st} (aid=${appo.aid}, st=0) }"
+                                                       class="btn btn-danger">Reject</a>
+
+                                                </a>
+                                                <div th:if="${appo.status == 'Accepted'}"><h6 style="color: green;">
+                                                    Status : [[${appo.status}]]</h6></div>
+                                                <div th:if="${appo.status == 'Rejected'}"><h6 style="color: red;">Status
+                                                    : [[${appo.status}]]</h6></div>
+
+                                            </a>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                        </tr>
+                        </tbody>
+
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

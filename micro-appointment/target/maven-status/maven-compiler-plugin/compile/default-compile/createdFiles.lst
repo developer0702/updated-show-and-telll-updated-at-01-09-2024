@@ -1,0 +1,14 @@
+com\appointment\response\DoctorResponse.class
+com\appointment\service\AppointmentService.class
+com\appointment\entity\Appointment.class
+com\appointment\service\CommonService.class
+com\appointment\response\MedicationResponse.class
+com\appointment\openfegin\PatientOpenFegin.class
+com\appointment\controller\AppointmentController.class
+com\appointment\response\AppointmentResponse.class
+com\appointment\openfegin\DoctorOpenFegin.class
+com\appointment\repo\AppointmentRepo.class
+com\appointment\MicroAppointmentApplication.class
+com\appointment\openfegin\MedicationOpenFiegn.class
+com\appointment\request\AppointmentRequest.class
+com\appointment\response\PatientResponse.class
